@@ -7,8 +7,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Protocolo HTTP e como é usado na WEB</h1>
-    <p></p>
-    
+    <div>
+        <hr>
+        <h1>Protocolo HTTP e como é usado na WEB</h1>
+        <hr>
+
+        <p>O HTTP (Hypertext Transfer Protocol) é um protocolo de comunicação usado para a transferência de dados na Web. Ele define como um cliente (como um navegador) e um servidor se comunicam para trocar informações, como páginas HTML, imagens, vídeos e outros recursos da internet.
+        </p>
+        <p>É um protocolo sem estado, o que significa que cada requisição feita pelo cliente é independente das anteriores, ou seja, o servidor não "lembra" das requisições anteriores por padrão. Para manter sessões de usuário, tecnologias como cookies e tokens são utilizadas.
+        </p>
+        <ol type="1">
+            <li>Quando você digita um endereço no navegador (exemplo: www.exemplo.com), o navegador envia uma requisição HTTP ao servidor desse site.</li>
+            <li>O servidor recebe a requisição, processa a solicitação e responde com os dados necessários, como uma página HTML.</li>
+            <li>O navegador recebe a resposta HTTP, interpreta o código e exibe o conteúdo ao usuário.</li>
+        </ol>
+
+        <h2>Exemplo de uma requisição HTTP</h2>
+
+        <p>Quando acessamos um site, o navegador envia uma requisição como esta:</p>
+
+        <div id="requisicao">
+            GET /index.html HTTP/1.1<br>
+            Host: www.exemplo.com<br>
+            User-Agent: Mozilla/5.0<br>
+            Accept: text/html<br>
+        </div>
+
+        <ul>
+            <li><strong>GET → </strong>Método da requisição (pode ser GET, POST, PUT, DELETE, etc.).</li>
+            <ul>
+                <li><strong>GET → </strong>Obtém um recurso do servidor (exemplo: acessar uma página).</li>
+                <li><strong>POST → </strong>Envia dados para o servidor (exemplo: formulário de login).</li>
+                <li><strong>PUT → </strong>Atualiza um recurso existente no servidor.</li>
+                <li><strong>DELETE → </strong>Remove um recurso do servidor.</li>
+            </ul>
+            <li><strong>/index.html → </strong>O recurso que está sendo solicitado.</li>
+            <li><strong>HTTP/1.1 → </strong>A versão do protocolo HTTP.</li>
+            <li><strong>Host → </strong>O domínio do servidor.</li>
+            <li><strong>User-Agent → </strong>Informa detalhes do navegador e sistema operacional.</li>
+            <li><strong>Accept → </strong>Diz ao servidor quais tipos de resposta o cliente aceita (exemplo: HTML, JSON).</li>
+        </ul>
+
+        <p>Com o exemplo acima, podemos analisar alguns pontos importantes. Agora vamos analisar as informações do site do <a href="https://translate.google.com.br/?sl=auto&tl=pt&op=translate">GOOGLE TRADUTOR</a> do arquivo pt-BR.js</p>
+        <img src="imagens/ddd.JPG" alt="requisicao_geral">
+
+        <ul>
+            <li><strong>Request URL:</strong> É o endereço completo do recurso solicitado. Ele indica que o navegador fez um pedido para obter um arquivo JavaScript (pt-BR.js) do servidor ssl.gstatic.com.</li>
+            <li><strong>Request Method:</strong>O método HTTP utilizado na requisição.</li>
+            <li><strong>Status Code:</strong>Indica o código de status da resposta do servidor. Neste caso "200" significa que a requisição foi bem-sucedida e o recurso foi retornado corretamente.</li>
+            <li><strong>Remote Address:</strong>O endereço IP (172.217.28.163) do servidor que respondeu à requisição. O número 443 indica que a conexão foi feita na porta 443, usada para HTTPS (conexões seguras).</li>
+            <li><strong>Referrer Policy</strong></li>
+
+        </ul>
+        
+
+    </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body{
     background-color: rgba(65, 65, 64, 0.329);
 }
-#titulo, h2{
+#titulo, h2, h1{
     margin: auto;
     width: auto;
     padding: 5px 1%;
