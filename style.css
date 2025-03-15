@@ -1,7 +1,7 @@
 body{
     background-color: rgba(65, 65, 64, 0.329);
 }
-#titulo{
+#titulo, h2{
     margin: auto;
     width: auto;
     padding: 5px 1%;
@@ -35,5 +35,17 @@ p{
     height: 210px;
     order: 1;
 }
+table, th, td{
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+tfoot{
+    background-color: aquamarine;
+}
+caption{
+    font-size: 20px;
+}
+
 
    
