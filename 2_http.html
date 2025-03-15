@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--Autor: Thiago Reinecke - ADS 2 - 14/03/2025-->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocolo HTTP</title>
@@ -12,15 +15,12 @@
         <h1>Protocolo HTTP e como é usado na WEB</h1>
         <hr>
 
-        <p>O HTTP (Hypertext Transfer Protocol) é um protocolo de comunicação usado para a transferência de dados na Web. Ele define como um cliente (como um navegador) e um servidor se comunicam para trocar informações, como páginas HTML, imagens, vídeos e outros recursos da internet.
+        <p>O <strong>HTTP (Hypertext Transfer Protocol)</strong> é um protocolo de comunicação usado para a transferência de dados na Web. Ele define como um cliente (como um navegador) e um servidor se comunicam para trocar informações, como páginas <strong>HTML</strong>, imagens, vídeos e outros recursos da internet.
         </p>
+        <img class="imagens_gerais" src="imagens/http.png" alt="http">
         <p>É um protocolo sem estado, o que significa que cada requisição feita pelo cliente é independente das anteriores, ou seja, o servidor não "lembra" das requisições anteriores por padrão. Para manter sessões de usuário, tecnologias como cookies e tokens são utilizadas.
         </p>
-        <ol type="1">
-            <li>Quando você digita um endereço no navegador (exemplo: www.exemplo.com), o navegador envia uma requisição HTTP ao servidor desse site.</li>
-            <li>O servidor recebe a requisição, processa a solicitação e responde com os dados necessários, como uma página HTML.</li>
-            <li>O navegador recebe a resposta HTTP, interpreta o código e exibe o conteúdo ao usuário.</li>
-        </ol>
+        <p>Quando você digita um endereço no navegador (exemplo: www.googletradutor.com), o navegador envia uma requisição <strong>HTTP</strong> ao servidor desse site. O servidor recebe a requisição, processa a solicitação e responde com os dados necessários, como uma página <strong>HTML</strong>. O navegador recebe a resposta <strong>HTTP</strong>, interpreta o código e exibe o conteúdo ao usuário.</p>
 
         <h2>Exemplo de uma requisição HTTP</h2>
 
@@ -48,16 +48,35 @@
             <li><strong>Accept → </strong>Diz ao servidor quais tipos de resposta o cliente aceita (exemplo: HTML, JSON).</li>
         </ul>
 
-        <p>Com o exemplo acima, podemos analisar alguns pontos importantes. Agora vamos analisar as informações do site do <a href="https://translate.google.com.br/?sl=auto&tl=pt&op=translate">GOOGLE TRADUTOR</a> do arquivo pt-BR.js</p>
-        <img src="imagens/ddd.JPG" alt="requisicao_geral">
-
+        <p>Com o exemplo acima, podemos analisar alguns pontos importantes. Agora vamos analisar as informações do site do <a href="https://translate.google.com.br/?sl=auto&tl=pt&op=translate">GOOGLE TRADUTOR</a> do arquivo pt-BR.js.</p>
+        <h2>Cabeçalho Geral</h2>
+        <img class="imagens_gerais" src="imagens/ddd.JPG" alt="requisicao_geral">
         <ul>
             <li><strong>Request URL:</strong> É o endereço completo do recurso solicitado. Ele indica que o navegador fez um pedido para obter um arquivo JavaScript (pt-BR.js) do servidor ssl.gstatic.com.</li>
             <li><strong>Request Method:</strong>O método HTTP utilizado na requisição.</li>
-            <li><strong>Status Code:</strong>Indica o código de status da resposta do servidor. Neste caso "200" significa que a requisição foi bem-sucedida e o recurso foi retornado corretamente.</li>
-            <li><strong>Remote Address:</strong>O endereço IP (172.217.28.163) do servidor que respondeu à requisição. O número 443 indica que a conexão foi feita na porta 443, usada para HTTPS (conexões seguras).</li>
-            <li><strong>Referrer Policy</strong></li>
-
+            <li><strong>Status Code: </strong>Indica o código de status da resposta do servidor. Neste caso "200" significa que a requisição foi bem-sucedida e o recurso foi retornado corretamente.</li>
+            <li><strong>Remote Address: </strong>O endereço IP (172.217.28.163) do servidor que respondeu à requisição. O número 443 indica que a conexão foi feita na porta 443, usada para HTTPS (conexões seguras).</li>
+            <li><strong>Referrer Policy: </strong>Define quais informações do site de origem podem ser enviadas junto com a requisição.</li>
+        </ul>
+        <h2>Request</h2>
+        <img class="imagens_gerais" src="imagens/request.JPG" alt="requisicao">
+        <ul>
+            <li><strong>Referer: </strong>Esse campo informa ao servidor de onde veio a requisição. No caso, o usuário estava no site do Google Tradutor quando a requisição foi feita.</li>
+            <li><strong>Sec-ch-ua (User-Agent Client Hints): </strong>fornece informações sobre o navegador e o dispositivo do usuário de forma mais controlada do que o User-Agent.</li>
+            <li><strong>Sec-ch-ua-arch: </strong>Informa a arquitetura do processador do dispositivo.</li>
+            <li><strong>Sec-ch-ua-bitness: </strong>Indica que o sistema operacional é de 64 bits.</li>
+            <li><strong>Sec-ch-ua-form-factors: </strong>Indica o tipo de dispositivo usado. No caso, um computador desktop.</li>
+            <li><strong>User-Agent: </strong>É uma string antiga que identifica o navegador e sistema operacional do usuário. Está sendo substituído pelos Client Hints (sec-ch-ua) para melhorar privacidade e reduzir o rastreamento de usuários.</li>
+        </ul>
+        <h2>Response</h2>
+        <img class="imagens_gerais" src="imagens/response.JPG" alt="response">
+        <ul>
+            <li><strong>Accept-ranges: </strong>Indica que o servidor suporta requisições parciais, ou seja, permite baixar apenas uma parte do arquivo em vez de todo o conteúdo de uma vez. Isso é útil para downloads pausáveis e streaming.</li>
+            <li><strong>Age:</strong>Mostra há quanto tempo o conteúdo está armazenado em cache no servidor ou em um proxy intermediário antes de ser enviado para o navegador.</li>
+            <li><strong>Content-security-policy-report-only: </strong>Define regras de segurança para evitar ataques XSS (Cross-Site Scripting)</li>
+            <li><strong>Content-type: </strong>Indica que o conteúdo da resposta é um arquivo JavaScript.</li>
+            <li><strong>Server; </strong>Indica o tipo de servidor que respondeu à requisição. No caso (sffe), é um dos servidores do Google.</li>
+            <li><strong>Vary: </strong>Indica que a resposta pode mudar dependendo do valor do cabeçalho Accept-Encoding.</li>
         </ul>
         
 

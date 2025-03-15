@@ -1,10 +1,15 @@
 body{
     background-color: rgba(65, 65, 64, 0.329);
 }
-#titulo, h2, h1{
+#titulo, h3, h2, h1{
     margin: auto;
     width: auto;
     padding: 5px 1%;
+    text-align: center;
+}
+#requisicao{
+    border: 3px black solid;
+    margin: auto;
     text-align: center;
 }
 div{
@@ -46,6 +51,12 @@ tfoot{
 caption{
     font-size: 20px;
 }
+.imagens_gerais{
+    float: auto;
+    width: 650px;
+    padding: 2%;
+}
+
 
 
    
