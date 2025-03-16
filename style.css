@@ -41,9 +41,14 @@ p{
     order: 1;
 }
 table, th, td{
+    border-collapse: collapse;
     margin: auto;
     border: 1px solid black;
     text-align: center;
+    background-color: rgb(179, 226, 211);
+}
+th{
+    background-color: rgb(70, 119, 103);
 }
 tfoot{
     background-color: aquamarine;
@@ -56,6 +61,7 @@ caption{
     width: 650px;
     padding: 2%;
 }
+
 
 
 
