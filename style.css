@@ -68,11 +68,9 @@ caption{
     width: 585px;
     padding: 1%;
 }
-.teste{
+.cabecalho_curriculo{
     display: flex;
     align-items: center;
-    
-    
 }
 .foto_perfil1{
     margin-top: 15px;
@@ -85,6 +83,12 @@ caption{
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+}
+#sumario{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 
