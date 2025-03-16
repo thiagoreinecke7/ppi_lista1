@@ -1,3 +1,5 @@
+/*Autor: Thiago Reinecke - ADS II - 14/03/2025*/
+
 body{
     background-color: rgba(65, 65, 64, 0.329);
 }
@@ -36,6 +38,7 @@ p{
     width: 285px;
     height: 200px;
     padding: 1%;
+    border-radius: 10px;
 }
 
 .world_wide{
@@ -67,6 +70,7 @@ caption{
     float: auto;
     width: 585px;
     padding: 1%;
+    border-radius: 10px;
 }
 .cabecalho_curriculo{
     display: flex;
