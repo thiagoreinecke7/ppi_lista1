@@ -7,37 +7,47 @@ body{
     padding: 5px 1%;
     text-align: center;
 }
+.curriculo{
+    margin: auto;
+    width: auto;
+    padding: 5px 1%;
+    text-align: left;
+}
 #requisicao{
     border: 3px black solid;
     margin: auto;
     text-align: center;
 }
-div{
+.fundo{
     background-color: rgb(245, 247, 248);
     margin: auto;
-    width: 50%;
-    border: 0px;
-    padding: 1px 5%;
-    text-align: justify; 
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 1px 50px;
+    text-align: justify;
+    box-shadow: 0 0 10px black;
 }
 p{
     text-indent: 30px;
 }
 .imagens_intro{
-    float: auto;
-    width: 300px;
+    float: flex;
+    justify-content: space-around;
+    width: 285px;
     height: 200px;
-    padding: 2%;
+    padding: 1%;
 }
 
-#world_wide{
+.world_wide{
     display: flex;
     gap: 20px;
 }
 
-#tim{
-    width: 160px;
-    height: 210px;
+.foto_perfil{
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 170px;
+    height: 200px;
     order: 1;
 }
 table, th, td{
@@ -50,17 +60,33 @@ table, th, td{
 th{
     background-color: rgb(70, 119, 103);
 }
-tfoot{
-    background-color: aquamarine;
-}
 caption{
     font-size: 20px;
 }
 .imagens_gerais{
     float: auto;
-    width: 650px;
-    padding: 2%;
+    width: 585px;
+    padding: 1%;
 }
+.teste{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.foto_perfil1{
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 170px;
+    height: 200px;
+    order: 1;
+}
+#contatos{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
 
 
 
