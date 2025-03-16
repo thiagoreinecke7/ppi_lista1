@@ -90,6 +90,31 @@ caption{
     flex-wrap: wrap;
     gap: 15px;
 }
+textarea{
+    width: 100%;
+    border-radius: 5px;
+}
+.sem_identacao{
+    text-align: center;
+}
+input, select{
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+#botao{
+    display: flex;
+    justify-content: center;   
+}
+button{
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: wheat;
+}
+a:hover{
+    background-color: yellowgreen;
+    font-size: 18px;
+}
 
 
 
